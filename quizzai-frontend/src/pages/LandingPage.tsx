@@ -1,5 +1,5 @@
 import React from "react";
-import LogoPrincipal from "../assets/logoprincipal.png";
+import LogoPrincipal from "../assets/LogoPrincipal.png";
 import { CustomInput, DifficultyButton, MainHeader } from "../components";
 
 const LandingPage = () => {
@@ -33,7 +33,13 @@ const LandingPage = () => {
           alt="Logo Principal"
           style={{ width: "30vw" }}
         />
-        <h1 style={{ color: "white", fontWeight: "lighter" }}>
+        <h1
+          style={{
+            color: "white",
+            fontWeight: "lighter",
+            fontSize: "2vw",
+          }}
+        >
           Enhance your learning with Quizz.ai!
         </h1>
         <CustomInput style={{ width: "50vw", height: "8vh" }} />

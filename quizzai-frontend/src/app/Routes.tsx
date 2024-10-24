@@ -5,13 +5,15 @@ import {
   Navigate,
   BrowserRouter,
 } from "react-router-dom";
-import { LandingPage } from "../pages";
+import { LandingPage, QuestionPage } from "../pages";
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <ReactRoutes>
         <Route path="/" element={<LandingPage></LandingPage>} />
+        <Route path="/question" element={<QuestionPage></QuestionPage>} />
+        <Route path="*" element={<Navigate to="/" />} />
       </ReactRoutes>
     </BrowserRouter>
   );

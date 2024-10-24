@@ -13,8 +13,6 @@ interface CustomInputProps {
 }
 
 const CustomInput: React.FC<CustomInputProps> = ({
-  width = "100%",
-  height = "100%",
   type = "text",
   placeholder = "",
   value,
@@ -31,7 +29,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
       onChange={onChange}
       style={{
         backgroundColor: "transparent",
-        borderRadius: "3rem",
+        borderRadius: "10vh",
         borderColor: "white",
         borderStyle: "solid",
         borderWidth: "0.1rem",
