@@ -3,6 +3,7 @@ import { MainHeader } from "../components";
 import { QuestionChangeButton } from "../components";
 
 const QuestionPage = () => {
+  const [hasText, setHasText] = React.useState(false);
   return (
     <div
       style={{
@@ -23,7 +24,7 @@ const QuestionPage = () => {
           height: "auto",
           alignSelf: "center",
           color: "white",
-          marginTop: "10vh",
+          marginTop: "5vh",
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: "5vh" }}>
@@ -31,6 +32,7 @@ const QuestionPage = () => {
           <textarea
             maxLength={500}
             placeholder="Write your answer here..."
+            onChange={(e) => setHasText(e.target.value.length > 0)}
             style={{
               background: "#d9d9d90f",
               border: "none",
@@ -42,9 +44,30 @@ const QuestionPage = () => {
               outline: "none",
               padding: "5vh 4vw",
               fontSize: "1.5vw",
+              fontFamily: "inherit",
             }}
             typeof="text"
           ></textarea>
+          <button
+            style={{
+              background: hasText
+                ? "linear-gradient(to right, #A852C3, #56106D)"
+                : "rgba(255, 255, 255, 0.1)",
+              color: hasText ? "white" : "rgba(255, 255, 255, 0.5)",
+              fontSize: "2vw",
+              border: "none",
+              borderRadius: "5vh",
+              width: "15vw",
+              height: "7vh",
+              alignSelf: "center",
+              fontFamily: "inherit",
+              fontWeight: "bold",
+              transition: "background-color 0.3s ease",
+              cursor: hasText ? "pointer" : "not-allowed",
+            }}
+          >
+            Submit
+          </button>
         </div>
         <div
           style={{
