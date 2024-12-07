@@ -1,14 +1,19 @@
 import React from "react";
 import ListIcon from "../assets/list.svg";
 
-const MainHeader = () => {
+interface MainHeaderProps {
+  backgroundColor?: string;
+}
+
+const MainHeader: React.FC<MainHeaderProps> = ({backgroundColor}) => {
   const [isCLicked, setIsClicked] = React.useState(false);
   return (
     <header
       style={{
         display: "flex",
         justifyContent: "right",
-        padding: "4vh 3vw",
+        padding: "3vh 3vw",
+        background: backgroundColor,
       }}
     >
       <button

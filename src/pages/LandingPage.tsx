@@ -17,7 +17,7 @@ const LandingPage = () => {
         gap: "10vh",
       }}
     >
-      <MainHeader />
+      <MainHeader backgroundColor="transparent"/>
       <div
         style={{
           display: "flex",
