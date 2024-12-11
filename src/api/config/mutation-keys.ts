@@ -1,0 +1,3 @@
+export const MUTATION_KEYS = {
+    REGISTER_USER: "REGISTER_USER",
+};
